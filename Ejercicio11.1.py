@@ -24,9 +24,9 @@ for row in rows:
 
 busqueda = input("\nIngresa el nombre a buscar:")
 
-query = f"SELECT id FROM alumnos WHERE nombre='{busqueda}'"
+query = f"SELECT * FROM alumnos WHERE nombre='{busqueda}'"
 
-result = cursor.execute(query).fetchone()
+result = cursor.execute(query).fetchall()
 
 print(result)
 
